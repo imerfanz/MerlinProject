@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-toastify@9.0.0/dist/ReactToastify.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/react-toastify@9.0.0/dist/ReactToastify.css"
+    />
+  </head>
+
+  <body>
+    <h1>Backend-Test application</h1>
+    <div>
+      <button id="get">GET</button>
+      <button id="post">POST</button>
+      <button id="put">PUT</button>
+      <button id="delete">DELETE</button>
+    </div>
+    <aside id="toast-container"></aside>
+  </body>
+  <script>
+    // Custom toast implementation
+    function createToast(message) {
+      const toastElement = document.createElement("div");
+      toastElement.classList.add("toast");
+      toastElement.textContent = message;
+      document.getElementById("toast-container").appendChild(toastElement);
+
+      setTimeout(() => {
+        toastElement.remove();
+      }, 2000); // Adjust the timeout as needed
+    }
+  </script>
+  <style>
+    body {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 150px;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(to bottom right, #111224, #ab2618);
+    }
+    h1 {
+      color: aliceblue;
+    }
+    div {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 80%;
+      gap: 20px;
+    }
+    button {
+      width: 250px;
+      aspect-ratio: 4/1;
+      margin-bottom: 15%;
+      font-size: 30px;
+      font-weight: bold;
+      color: aliceblue;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.408);
+      background: linear-gradient(to right, #f94d0d, #fa9b09);
+      transition: all 150ms ease-out;
+    }
+    button:hover {
+      cursor: pointer;
+      box-shadow: 0px 3px 25px 2px rgba(0, 0, 0, 0.408);
+    }
+    button:active {
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      transform: scale(0.75);
+    }
+
+    @keyframes button-pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .toast {
+      position: fixed;
+      width: 400px;
+      height: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      bottom: 50px;
+      right: 20px;
+      padding: 10px;
+      color: #fff;
+      border-left: 2px solid #e9e91c;
+      background: linear-gradient(to top, #272725, #35352c);
+      border-radius: 7px;
+      box-shadow: -2px 3px 5px 2px rgba(0, 0, 0, 0.326);
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .toast.fading {
+      opacity: 0;
+    }
+  </style>
+  <script>
+    const getBtn = document.getElementById("get");
+    const postBtn = document.getElementById("post");
+    const putBtn = document.getElementById("put");
+    const deleteBtn = document.getElementById("delete");
+
+    getBtn.addEventListener("click", (e) => {
+      fetch("http://localhost:8080/user/log", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          phone: "09959425717",
+          password: "Erfan2erfan",
+        }),
+      })
+        .then(async (res) => {
+          const respond = await res.text();
+          if (res.status == 200) {
+            createToast(respond);
+          } else {
+            // create error toast
+            createToast(respond);
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          createToast("Error: Failed to send POST request");
+        });
+    });
+    postBtn.addEventListener("click", (e) => {
+      fetch("http://localhost:8080/user/reg", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          
+        }),
+      })
+        .then(async (res) => {
+          const respond = await res.text();
+          if (res.status == 200) {
+            createToast(respond);
+          } else {
+            // create error toast
+            createToast(respond);
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          createToast("Error: Failed to send POST request");
+        });
+    });
+    putBtn.addEventListener("click", (e) => {
+      fetch("http://localhost:8080/product", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          _id: "66f330e76e6187f4c035b01f",
+          name: "10/90 arabica",
+          weights: [250, 500, 1000],
+          prices: [180, 400, 650],
+          offer: 0,
+          explanation: [
+            ["country", "iran"],
+            ["roast", "iran"],
+          ],
+          category: "coffee",
+          available: false,
+          picture:
+            "http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/800px-A_small_cup_of_coffee.JPG",
+        }),
+      })
+        .then(async (res) => {
+          if (res.status == 200) {
+            return await res.text();
+          } else {
+            throw new Error(`Error :${await res.text()}`);
+          }
+        })
+        .then((data) => {
+          createToast("Data Updated successfully!");
+        })
+        .catch((err) => {
+          createToast(err.message || "Error Updating data");
+        });
+    });
+    deleteBtn.addEventListener("click", (e) => {
+      fetch("http://localhost:8080/blogs/getBlogs", {
+        method: "GET",
+      })
+        .then(async (res) => {
+          if (res.status == 200) {
+            return await res.text();
+          } else {
+            throw new Error(`Error :${await res.text()}`);
+          }
+        })
+        .then(async (data) => {
+          createToast("Data deleted successfully!");
+          console.log(JSON.parse(data));
+        })
+        .catch((err) => {
+          createToast(err.message || "Error deleting data");
+        });
+    });
+  </script>
+</html>

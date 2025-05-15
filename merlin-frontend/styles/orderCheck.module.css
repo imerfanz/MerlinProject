@@ -1,0 +1,71 @@
+.thisClass {
+  padding-top: 120px;
+  text-align: center;
+  margin-bottom: -80px;
+}
+.container {
+  width: 500px;
+  margin: auto;
+  box-shadow: -2px 3px 6px 1px rgba(0, 0, 0, 0.214);
+  background-color: rgb(255, 253, 253);
+  min-height: 400px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 10px;
+}
+.container span {
+  border: 2px solid #80808054;
+  height: 40px;
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+}
+.container span p {
+  color: #525252;
+}
+.orderContain {
+  border: 1px solid #80808065;
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+  overflow: scroll;
+  height: auto;
+}
+.orderContain::-webkit-scrollbar {
+  height: 2px;
+  width: 2px;
+  background-color: #fff;
+}
+.orderContain::-webkit-scrollbar-thumb {
+  background-color: #525252;
+  border-radius: 10px;
+}
+.orderContain div {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 40px;
+  align-items: center;
+}
+.orderContain div p {
+}
+.orderContain div p:nth-child(1) {
+  width: 5%;
+}
+.orderContain div p:nth-child(2) {
+  width: 40%;
+}
+.orderContain div p:nth-child(3){
+    width: 20%;
+}
+.orderContain div p:nth-child(4){
+    width: 5%;
+}
+.orderContain div p:nth-child(5){
+    width: 30%;
+}

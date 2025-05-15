@@ -1,0 +1,334 @@
+.thisClass {
+  padding-top: 100px;
+  margin-bottom: -100px;
+}
+#backgroundMaker {
+  height: 500px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  /* background: linear-gradient(to bottom, #ffc1079f, white); */
+  z-index: -1;
+}
+.thisClass article {
+  margin-top: 40px;
+  width: 60%;
+  padding: 20px;
+  margin-right: 10%;
+  border-radius: 7px;
+  box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.242);
+}
+.thisClass h1 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2b2b2b;
+}
+.thisClass .articlePic {
+  margin: 30px auto;
+  display: block;
+}
+.thisClass p {
+  font-size: 20px;
+  color: #3a3a3a;
+  line-height: 1.8;
+  margin-right: 2%;
+}
+
+/* offer part */
+.offer {
+  background: linear-gradient(230deg, #ffd7004d, #ff8a00c9);
+  height: 550px;
+  border-radius: 10px;
+  animation: gradientShift 4s ease infinite;
+  width: 200px;
+  position: absolute;
+  left: 5%;
+  top: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.offer p {
+  font-size: 17px;
+}
+.offer .offerSlide {
+  background-color: white;
+  width: 150px;
+  height: 190px;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 7px;
+  position: relative;
+}
+.offerSlide img {
+  width: 110px;
+  aspect-ratio: 1/1;
+  margin: auto;
+  margin-top: -7px;
+}
+.articlePic{
+}
+.offerSlide h3 {
+  color: #005368;
+}
+.offerSlide:hover{
+  cursor: pointer;
+}
+.offerSlide p {
+  position: absolute;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  bottom: 4%;
+}
+.offerFirst {
+  padding-inline: 5%;
+}
+.offerFirst h2 {
+  /* Brighter, more attention-grabbing colors */
+  color: #ff3434;
+  animation: colorAnimation 4000ms ease-out infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: #ff3434;
+    transform: scale(1);
+  }
+  50% {
+    color: #ff0062;
+    filter: drop-shadow(2px 1px 4px rgba(0, 0, 0, 0.15));
+    transform: scale(1.05);
+  }
+  100% {
+    color: #ff3434;
+    transform: scale(1);
+  }
+}
+.offerMid {
+  display: flex;
+  flex-direction: column;
+}
+.offerMid button {
+  /* Make buttons more prominent */
+  background: linear-gradient(45deg, #ff3434, #ff0062);
+  color: white;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  margin: auto;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  transition: all 200ms ease;
+}
+.offerMid button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #ff0062, #ff3434);
+  color: white;
+}
+.offerMid button:hover {
+  cursor: pointer;
+}
+.offerMid button:first-child {
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+.offerMid button:active {
+  scale: 0.9;
+}
+.offerMid i {
+  color: #0084ff;
+  color: #005368;
+}
+/* Media Queries for smaller screens */
+@media (max-width: 1200px) {
+  .offer {
+    position: absolute;
+    top: -250px;
+    right: 5%;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .offerFirst {
+    width: 35%;
+    padding: 0;
+  }
+  .thisClass article {
+    width: 80%;
+    position: relative;
+    margin: 10px auto;
+    margin-top: 280px;
+    margin-bottom: 150px;
+  }
+  .slickControll {
+    width: 25%;
+  }
+}
+@media (max-width: 850px) {
+  .offer {
+    width: 100%;
+    right: 0;
+  }
+  .slickControll {
+    width: 40%;
+  }
+  .articlePic {
+    width: 95%;
+    margin: auto;
+    height: calc(80vw / 2);
+  }
+  .offerFirst {
+    width: 30%;
+    padding: 10px;
+  }
+  .offerFirst h2 {
+    font-size: 23px;
+  }
+  .thisClass article .offerFirst p {
+    font-size: 16px;
+  }
+  .thisClass article h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .thisClass article p {
+    font-size: 18px;
+  }
+   .thisClass article .slickControll p {
+    font-size: 17px;
+    color: #2b2b2b;
+  }
+}
+@media (max-width: 708px) {
+  .thisClass article {
+    width: 90%;
+    margin: 10px auto;
+    margin-top: 300px;
+  }
+
+  .offer {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    padding-right: 45%;
+    gap: 15px;
+    top: -300px;
+    height: auto;
+  }
+  .offerFirst {
+    width: 100%;
+  }
+  .slickControll {
+    position: absolute;
+    right: 0;
+    margin-bottom: 15px;
+    width: 40%;
+  }
+  .offerFirst h2 {
+    font-size: 22px;
+  }
+  .offerFirst p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 580px) {
+  .thisClass article {
+    margin-top: 340px;
+  }
+  .offer {
+    top: -330px;
+  }
+}
+@media (max-width: 480px) {
+  .thisClass article {
+    padding: 0px;
+  }
+  .thisClass article h1 {
+    padding-top: 20px;
+  }
+  .thisClass article p:not(.offer p) {
+    padding: 15px;
+    text-align: justify;
+    line-height: 1.6;
+    word-spacing: -0.5px;
+  }
+
+  .articlePic {
+    width: 100%;
+    height: calc(85vw / 2);
+  }
+  .offerFirst {
+    width: 90%;
+  }
+  .offerFirst h2 {
+    font-size: 20px;
+  }
+  .offerFirst p {
+    font-size: 14px;
+  }
+  .offerMid button {
+    font-size: 14px;
+    width: 140px;
+  }
+
+  .offerMid button:first-child {
+    font-size: 15px;
+  }
+  .slickControll {
+    width: 40%;
+    right: 5%;
+    top: 5%;
+  }
+  .offerSlide {
+    scale: 0.9;
+    border: 1px solid rgba(0, 0, 0, 0.41);
+  }
+}
+@media (max-width: 420px) {
+  .offer {
+    width: 120%;
+    right: -10%;
+    border-radius: 0px;
+  }
+  .offerFirst h2 {
+    font-size: 22px;
+  }
+
+  .slickControll {
+    width: 40%;
+    right: 5%;
+    top: 2%;
+  }
+
+  .offerSlide {
+    scale: 0.8;
+    margin: 0px;
+  }
+}

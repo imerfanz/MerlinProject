@@ -1,0 +1,38 @@
+.thisClass{
+    text-align: center;
+    padding-top: 140px;
+}
+.thisClass form{
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.214);
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.thisClass form input{
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #a0a0a086;
+    direction: rtl;
+    padding-right: 10px;
+}
+.thisClass form button{
+    width: 200px;
+    height: 33px;
+    font-size: 18px;
+    border: none;
+    padding-bottom: 3px;
+    font-weight: 600;
+    color: #ffffffe8;
+    border-radius: 7px;
+    background-color: #5f6bf9;
+}
+.thisClass form button:hover{
+    filter: brightness(105%) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.208));
+    cursor: pointer;
+}

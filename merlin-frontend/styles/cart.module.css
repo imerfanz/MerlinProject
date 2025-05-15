@@ -1,0 +1,231 @@
+.thisClass {
+  padding-top: 100px;
+  min-height: 45vh;
+  direction: rtl;
+}
+.thisClass h1 {
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  width: 80%;
+  padding-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.337);
+}
+.thisClass h1 i {
+  color: #57130a;
+}
+.contain {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 100px;
+  justify-content: center;
+}
+.ctaPart {
+  background-color: #302013f5;
+  background-color: #174c76;
+  background-color: #293d4e;
+  background-color:white;
+  border: 2px solid transparent;
+  color: #ffffffef;
+  border-radius: 10px;
+  text-align: center;
+  height: 350px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-bottom: 5px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.ctaPart span {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.ctaLabel {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4b3b1cee;
+  color: #f2e5d5d3;
+  color: rgba(0, 0, 0, 0.66);
+}
+.ctaPrice {
+  font-size: 15px;
+  font-weight: 500;
+  color: #f2e5d5a6;
+  color: rgba(0, 0, 0, 0.56);
+}
+.ctaPart button {
+  background: linear-gradient(to top right, #a70101, #cf0101);
+  background: linear-gradient(to top right, #5a6800, #859900);
+  border: none;
+  width: 85%;
+  margin: 0px auto;
+  aspect-ratio: 7/1;
+  border-radius: 10px;
+  padding-bottom: 2px;
+  font-size: 20px;
+  color: aliceblue;
+  color: white;
+  font-weight: 600;
+  transition: all 50ms ease-in-out;
+}
+.ctaPart button:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.485));
+}
+.ctaPart button:active {
+  transform: scale(0.9);
+}
+.ctaPrice b {
+  font-size: 12px;
+  font-size: 600;
+}
+
+/*************  Cart Items  ***************/
+.cartPart {
+  border: 1px solid #57130a3f;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-top: -25px;
+  width: 650px;
+  text-align: center;
+  padding-bottom: 15px;
+  border-collapse: collapse;
+}
+.cartItem {
+  background-color: white;
+  border-bottom: 1px solid #9b9b9b86;
+  width: calc(100% - 30px);
+  height: 120px;
+  color: #000000c6;
+}
+.cartPart thead tr{
+  border-bottom: 1px solid #9b9b9b;
+  height: 100px;
+}
+
+.cartItem i{
+  width: 25px;
+  scale: 1.4;
+  color: #a70101;
+}
+.cartItem i:hover{
+  cursor: pointer;
+  color: #a70101c9;
+}
+.cartItem img{
+  right: 0;
+}
+.itemName{
+  font-weight: 600;
+  font-size: 20px;
+}
+.noCart{
+  height: 100px;
+  color: #c9630a;
+}
+
+/*************  Responsive Part  ***************/
+@media (width<= 1200px) {
+.contain {
+  flex-direction: column;
+  width: 100%;
+}
+.ctaPart {
+  margin:auto;
+  width: 500px;
+  border-radius:10px;
+
+}
+.ctaPart button{
+  height: 40px;
+}
+.cartPart {
+  width: 70%;
+  margin-top: 0px;
+  margin: auto;
+}
+}
+@media (width<= 900px) {
+  .cartPart{
+    width: 85%;
+  }
+  .ctaPart{
+    width: 400px;
+  }
+}
+@media (width <= 650px ){
+  .thisClass h1 {
+    font-size: 26px;
+  }
+  .cartPart{
+    font-size:15px;
+    width: 100%;
+  }
+  .cartPart img{
+    scale: 0.7;
+  }
+  .itemName{
+    font-size: 16px;
+  }
+  .cartPart td:nth-child(1){
+    width: 20%;
+  }
+  .cartPart td:nth-child(2){
+    width: 25%;
+  }
+  .cartPart td:nth-child(3){
+    width: 15%;
+  }
+  .cartPart td:nth-child(4){
+    width: 10%;
+  }
+  .cartPart td:nth-child(5){
+    width: 15%;
+  }
+  .cartPart td:nth-child(6){
+    width: 15%;
+  }
+}
+@media (width <= 450px ){
+  .cartPart td:nth-child(1){
+    display: none;
+  }
+  .cartPart th:nth-child(1){
+    display: none;
+  }
+  .cartPart td:nth-child(2){
+    width: 30%;
+  }
+  .cartPart td:nth-child(3){
+    width: 15%;
+  }
+  .cartPart td:nth-child(4){
+    width: 10%;
+  }
+  .cartPart td:nth-child(5){
+    width: 15%;
+  }
+  .cartPart td:nth-child(6){
+    width: 15%;
+  }
+  .ctaPart{
+    width : 320px;
+    margin-bottom:-50px;
+  }
+  .ctaPart span {
+    width: 80%;
+  }
+  .ctaLabel {
+    font-size: 16px;
+  }
+  .ctaPrice {
+    font-size: 13px;
+  }
+}

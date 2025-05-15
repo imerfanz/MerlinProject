@@ -1,0 +1,379 @@
+.main section {
+  margin-top: 150px;
+  text-align: center;
+  padding-left: 200px;
+}
+.main section h1 {
+  margin-bottom: 60px;
+  margin-left: 50%;
+}
+.main section article {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.blogContain {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding-top: 10px;
+  gap: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 90px;
+}
+.main article .blogItems {
+  width: 430px;
+  direction: rtl;
+  position: relative;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: -1px 2px 3px 1px rgba(0, 0, 0, 0.2),
+    /* Main shadow */ -1px 1px 13px rgba(0, 0, 0, 0.08);
+  padding-left: 20px;
+  aspect-ratio: 16/9;
+  text-align: right;
+  overflow: hidden;
+  padding-top: 17px;
+  transition: all 200ms ease-out;
+}
+.main article .blogItems:hover {
+  cursor: pointer;
+}
+.main article .blogItems:hover img {
+  filter: brightness(0.6) blur(1px);
+  scale: 1.05;
+}
+.main article h2 {
+  margin: auto;
+  color: #000b18ef;
+  margin-bottom: 20px;
+  font-size: 23px;
+  font-weight: 600;
+  position: absolute;
+  width: 80%;
+  right: 10%;
+  color: #fffffff6;
+}
+.main article p {
+  color: #000000ce;
+  position: absolute;
+  width: 80%;
+  right: 10%;
+  top: 30%;
+  color: white;
+}
+.main article img {
+  position: absolute;
+  right: 2%;
+  top: 4%;
+  height: 57%;
+  border-radius: 7px;
+  width: 45%;
+  filter: brightness(0.5) blur(1px);
+  transition: all 200ms ease-in-out;
+}
+.main article img {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  height: 100%;
+  border-radius: 7px;
+  width: 100%;
+}
+.main article pre {
+  position: absolute;
+  color: #000914ab;
+  color: #410e07;
+  color: #a01300;
+  left: calc(5% + 23px);
+  bottom: 17px;
+  font-size: 16px;
+}
+.main article i {
+  position: absolute;
+  left: 5%;
+  bottom: 19px;
+  color: #000914ab;
+  color: #410e07;
+  color: #a01300;
+  padding: 3px;
+  padding-top: 4px;
+  border-radius: 50%;
+}
+.main article button {
+  width: 110px;
+  aspect-ratio: 3/1;
+  width: 45%;
+  aspect-ratio: 11/2;
+  font-size: 16px;
+  color: #000914d7;
+  font-weight: 500;
+  border-radius: 7px;
+  border: 2px solid #000914b4;
+  background: none;
+  margin-top: 20px;
+  transition: all 100ms ease-out;
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  display: none;
+}
+.main article button:hover,
+.main article button:active {
+  cursor: pointer;
+  opacity: 0.8;
+}
+/* the part for offers and etc */
+.offer {
+  background: linear-gradient(230deg, #ffd7004d, #ff8a00c9);
+  height: 550px;
+  border-radius: 10px;
+  width: 200px;
+  position: absolute;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.offer .offerSlide {
+  background-color: white;
+  width: 150px;
+  height: 190px;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 7px;
+  position: relative;
+}
+.offerSlide:hover{
+  cursor: pointer;
+}
+.offerSlide img {
+  width: 110px;
+  aspect-ratio: 1/1;
+  margin: auto;
+  margin-top: -7px;
+}
+.offerSlide p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 4%;
+}
+.offerFirst {
+  padding-inline: 5%;
+}
+.offerFirst h2 {
+  color: #ff3434;
+  animation: colorAnimation 2000ms ease-out infinite;
+}
+@keyframes colorAnimation {
+  0% {
+    color: #ff3434;
+    transform: scale(1);
+  }
+  50% {
+    color: #ff0062;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    transform: scale(1.05);
+  }
+  100% {
+    color: #ff3434;
+    transform: scale(1);
+  }
+}
+.offerMid {
+  display: flex;
+  flex-direction: column;
+}
+.offerMid button {
+  width: 150px;
+  margin: auto;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff3434, #ff0062);
+  color: white;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: all 200ms ease;
+}
+.offerMid button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #ff0062, #ff3434);
+  color: white;
+  cursor: pointer;
+}
+.offerMid button:first-child {
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+.offerMid button:active {
+  scale: 0.9;
+}
+.offerMid i {
+  color: #0084ff;
+  color: #005368;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 1200px) {
+  .offer {
+    position: relative;
+    left: 0;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .offerFirst {
+    width: 35%;
+    padding: 0;
+  }
+
+  .slickControll {
+    width: 25%;
+  }
+  .main section {
+    padding-left: 20px;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 708px) {
+  .blogContain {
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 60px;
+  }
+  .main section h1 {
+    text-align: center;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 50px;
+  }
+
+  .main article .blogItems {
+    width: 100%;
+    max-width: 430px;
+    margin: 10px auto;
+  }
+
+  .offer {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    padding-right: 45%;
+    gap: 15px;
+    height: auto;
+  }
+  .offerFirst {
+    width: 120%;
+  }
+  .slickControll {
+    position: absolute;
+    right: 0;
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main article .blogItems {
+    padding-right: 20px;
+    height: auto;
+    min-height: 240px;
+  }
+
+  .main article img {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+    top: auto;
+    right: auto;
+  }
+
+  .main article button {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+  }
+  .offerFirst {
+    width: 90%;
+  }
+  .offerFirst h2 {
+    font-size: 19px;
+  }
+  .offerFirst p {
+    font-size: 14px;
+  }
+
+  .offerMid button {
+    font-size: 14px;
+    width: 120px;
+  }
+
+  .offerMid button:first-child {
+    font-size: 15px;
+  }
+  .slickControll {
+    width: 40%;
+    right: 5%;
+    top: 5%;
+  }
+  .offerSlide {
+    scale: 0.9;
+    border: 1px solid rgba(0, 0, 0, 0.41);
+  }
+}
+@media (max-width: 420px) {
+  .offer {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .main section {
+    padding-left: 0px;
+  }
+
+  .slickControll {
+    width: 40%;
+    right: 5%;
+    top: 2%;
+  }
+
+  .offerSlide {
+    scale: 0.8;
+    margin: 0px;
+  }
+}

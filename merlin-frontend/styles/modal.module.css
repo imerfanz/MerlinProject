@@ -1,0 +1,84 @@
+/* General backdrop for mMdals */
+.backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* Cart page Modal */
+.cartContainer{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-align: center;
+}
+.cartModal{
+    box-shadow: 0px 4px 17px 3px rgba(0, 0, 0, 0.3);
+    background-color: whitesmoke;
+    position: absolute;
+    top: 120px;
+    right: calc(50% - 370px);
+    width: 700px;
+    aspect-ratio: 2/1;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+.cartModal .orderDiv{
+    border: 1px solid rgb(116, 116, 116);
+    width: 80%;
+    aspect-ratio: 6/1;
+    border-radius: 6px;
+    margin-inline: auto;
+    overflow-y: scroll;
+}
+.cartModal .orderDiv::-webkit-scrollbar{
+    width: 3px;
+}
+.orderDiv::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.468);
+    border-radius: 5px;
+}
+.cartModal .orderDiv div{
+    border-bottom: 1px solid rgb(163, 163, 163);
+    width: 95%;
+    margin-inline: auto;
+    align-items: center;
+    display: flex;
+    height: 40px;
+}
+.cartModal button{
+    width: 160px;
+    aspect-ratio: 9/2;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    color: rgb(235, 235, 235);
+    border-radius: 5px;
+    transition: all 50ms linear;
+}
+.cartModal button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+.cartModal button:active{
+    transform: scale(0.95);
+}
+.cartModal p{
+    width: 80%;
+    margin-inline: auto;
+    color: #000000b4;
+}
+.cartModal p:first-child{
+    color: #000000e4;
+
+}
+.cartModal span{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-inline: auto;
+}
